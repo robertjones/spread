@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Spread</title>
+<style>
+
+body {
+  font-size: 16px;
+  font-family: 'Arial';
+  text-align: center;
+}
+
+svg {
+  margin: auto;
+}
+
+.node {
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.healthy {
+  fill: green;
+}
+
+.infected {
+  fill: red;
+}
+
+.immune {
+  fill: silver;
+}
+
+.link {
+  stroke: #bbb;
+  stroke-width: 2px;
+}
+
+.small {
+  font-size: 12px;
+  width: 960px;
+  text-align: right;
+  margin: auto;
+  color: #888;
+}
+
+</style>
+<body>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.9.3/lodash.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="spread.js"></script>
+  <p class="small">By <a href="http://www.twitter.com/robjones">Rob Jones</a></p>
+</body>
