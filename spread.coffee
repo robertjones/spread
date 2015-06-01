@@ -1,5 +1,7 @@
 load = (numNodes) ->
+
   d3.select('svg').remove()
+  d3.select('p').remove()
 
   width = 960
   height = 500
@@ -12,8 +14,12 @@ load = (numNodes) ->
             .linkStrength(0.2)
 
   svg = d3.select('body').append('svg')
-            .attr('width', width)
-            .attr('height', height)
+          .attr('width', width)
+          .attr('height', height)
+
+  d3.select('body').append('p').attr('class', 'small')
+    .html("""By <a href="http://www.twitter.com/robjones">Rob Jones</a>.
+             <a href="https://github.com/robertjones/spread">View code</a>.""")
 
   msgBox = svg.append('text')
               .attr('x', 5)

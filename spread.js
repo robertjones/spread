@@ -5,10 +5,12 @@
   load = function(numNodes) {
     var force, gameOver, generateGraph, graph, height, infect, keyData, link, msgBox, node, showButton, svg, width;
     d3.select('svg').remove();
+    d3.select('p').remove();
     width = 960;
     height = 500;
     force = d3.layout.force().charge(-300).linkDistance(65).size([width, height]).gravity(0.2).linkStrength(0.2);
     svg = d3.select('body').append('svg').attr('width', width).attr('height', height);
+    d3.select('body').append('p').attr('class', 'small').html("By <a href=\"http://www.twitter.com/robjones\">Rob Jones</a>.\n<a href=\"https://github.com/robertjones/spread\">View code</a>.");
     msgBox = svg.append('text').attr('x', 5).attr('y', 25).text('Click to immunise');
     showButton = function() {
       var buttonGroup1, buttonGroup2;
